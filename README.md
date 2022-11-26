@@ -2,7 +2,7 @@ tRPC practice woes. Hand built playground based on https://github.com/trpc/examp
 
 The basic e2e flow is working without inputs using `trpc.user.flatList.useQuery`.
 
-But braking with leveraging inputs. Error seen when using `trpc.user.list.useInfiniteQuery`
+But breaking when leveraging inputs through `trpc.user.list.useInfiniteQuery`.
 
 ```bash
 TRPCClientError
@@ -35,3 +35,7 @@ TRPCClientError
   [cause]: undefined
 }
 ```
+
+The only clear difference I can see between this hand built stack and the example, is the database provider. The example is using postgres whereas I'm using mysql through planetscale. I'm not sure this is even an issue.
+
+The error message doesn't give me enough of a hint to what layer may be failing.
